@@ -12,7 +12,6 @@ app.get('/api', (req, res) => {
 
   // Get the current UTC time with a +/-2 minute window
   const now = new Date();
-  now.setMinutes(now.getMinutes() - 2);
   const year = now.getUTCFullYear();
   const month = String(now.getUTCMonth() + 1).padStart(2, '0');
   const day = String(now.getUTCDate()).padStart(2, '0');
