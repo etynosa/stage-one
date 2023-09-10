@@ -23,5 +23,5 @@ Follow these steps to set up and run the application locally.
 
 ```bash
 git clone https://github.com/yourusername/your-repo.git
-Navigate to the project directory:
-cd your-repo
+
+
