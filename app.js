@@ -12,7 +12,6 @@ app.get('/api', (req, res) => {
 
   // Get the current UTC time with a +/-2 minute window
   const now = new Date();
-  now.setMinutes(now.getMinutes() - 2);
   const utcTime = now.toISOString();
 
   const githubFileUrl = 'https://github.com/etynosa/stage-one';
