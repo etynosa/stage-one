@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 
-// Define a route that handles GET requests to /api
 app.get('/api', (req, res) => {
   // Retrieve query parameters
   const slackName = req.query.slack_name || 'unknown';
@@ -16,11 +15,10 @@ app.get('/api', (req, res) => {
   now.setMinutes(now.getMinutes() - 2);
   const utcTime = now.toISOString();
 
-  // GitHub URL for the file being run and the full source code repository
-  const githubFileUrl = 'https://github.com/username/repo/blob/main/file_name.ext';
-  const githubRepoUrl = 'https://github.com/username/repo';
+  const githubFileUrl = 'https://github.com/etynosa/stage-one';
+  const githubRepoUrl = 'https://github.com/etynosa/stage-one/blob/main/app.js';
 
-  // Prepare the JSON response
+
   const response = {
     slack_name: slackName,
     current_day: currentDay,
@@ -31,7 +29,7 @@ app.get('/api', (req, res) => {
     status_code: 200,
   };
 
-  // Send the JSON response
+
   res.json(response);
 });
 
